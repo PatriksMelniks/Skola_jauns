@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Birthday</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+  
+        <h1>Gaidot dzimšanas dienu</h1><hr>
+        <form name="forma" method="get">
+            <p>Ievadi pilnudatumu, kad Tev būs tuvākā dzimšanas diena</p>
+            <div>
+                <label for="gadsInput">gads:</label>
+                <input type="text" id="gadsInput" name="gads">
+                <label for="menesisInput">mēnesis:</label>
+                <input type="text" id="menesisInput" name="menesis">
+                <label for="datumsInput">diena:</label>
+                <input type="text" id="datumsInput" name="datums">
+                <input type="button" name="poga" onclick="dienas.value=Math.floor(Math.abs((new Date().setFullYear(document.forma.gads.value, document.forma.menesis.value-1, document.forma.datums.value) - new Date())/24000/3600))" value="Aprēķināt dienu skaitu līdz dzimšanas dienai">
+ 
+            </div>
+            <p>Līdz svētkiem atlikušas</p>
+            <input type="text" name="dienas" id="dienasInput">
+            <label for="dienasInput">dienas :))</label>
+        </form>
+    </body>
+</html>
